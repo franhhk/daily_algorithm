@@ -58,7 +58,8 @@ function solution(progresses, speeds) {
     answer.push(daysCount)
     
     return answer;
-}```
+}
+```
 <br>
 
 ### 다른 사람의 풀이
