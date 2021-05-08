@@ -108,6 +108,5 @@ function browserStack(actions, start) {
 
 ### 유사 문제
 ---
-- 코드스테이츠 / Data Structure & Algorithm_04 동화책 출간
 
 <br>
