@@ -90,7 +90,8 @@ const powerSet = function (str) {
   pickOrNot(0, '');
 
   return subSets.sort();
-};```
+};
+```
 <br>
 
 ### 유사 문제
