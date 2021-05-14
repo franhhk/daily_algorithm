@@ -1,4 +1,4 @@
-코드스테이츠 : (토이 12번) treeBFS
+코드스테이츠 : (토이 13번) insertionSort
 ===
 ### 링크
 https://urclass.codestates.com/codeproblem/9347b40b-4775-4ab9-92fb-63bbed16a14f
