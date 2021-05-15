@@ -76,7 +76,56 @@ function solution(begin, target, words) {
 
 ### 다른 사람의 풀이
 ---
-dfs/bfs 문제 특성상 node의 방문 여부를 체크하는 경우가 많았는데, 나는 여기서는 굳이 이를 boolean값으로 표시할 필요가 없다고 느꼈다. 위의 코드에서는 방문 후 node에 재할당이 이뤄지지 않으면 queue에 다시 push, 그렇지 않으면 shift메소드로 queue에서 제거하는 방식으로 방문 여부를 확인했다.
+dfs/bfs 문제 특성상 node의 방문 여부를 체크하는 경우가 많았는데, 나는 여기서는 굳이 이를 boolean값으로 표시할 필요가 없다고 느꼈다. 나는 방문 후 node에 재할당이 이뤄지지 않으면 queue에 다시 push, 그렇지 않으면 shift메소드로 queue에서 제거하는 방식으로 방문 여부를 확인했다.
+
+```js
+function solution(begin, target, words) {
+    const queue = [begin];
+    const visitArr = new Array(words.length).fill(false);
+    let ctr = 0;
+    let shiftedWord = begin;
+    let queueLeng = 1;
+
+    while(queue.length > 0) {
+        shiftedWord = queue.shift();
+        queueLeng--;
+
+        for(let i in words) {            
+            if(check(shiftedWord, words[i])) {
+                if(visitArr[i] == true) 
+                    continue;
+
+                if(words[i] == target)
+                    return ctr+1;
+
+                visitArr[i] = true;
+                queue.push(words[i]);
+            }
+        }
+
+        if(queueLeng == 0) {
+            ctr++;
+            queueLeng = queue.length;
+        }
+    }
+    return 0;
+
+    function check(standard, word) {
+        let diffCtr = 0;
+
+        if(standard.length != word.length) 
+            return false;
+
+        for(let i=0; i<standard.length; i++) {
+            if(standard.charAt(i) != word.charAt(i))
+                diffCtr++;
+            if(diffCtr > 1)
+                return false;
+        }
+        return true;
+    }
+}
+```
 
 <br>
 
