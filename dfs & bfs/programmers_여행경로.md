@@ -70,9 +70,10 @@ function solution(tickets) {
 }
  
 ```
-따라서 다음과 같이 코드를 수정했다
+다음과 같이 코드를 수정했다
 ```js
 //최종 코드
+
 function solution(tickets) {
     var answer = [];
     
