@@ -88,9 +88,11 @@ function solution(clothes) {
     }
     
     for(let key in obj) {
+    // + 1을 하는 경우는 해당 옷의 종류를 착용하지 않은 경우를 고려한 것이다
         answer = answer * (obj[key].length + 1)
     }
     
+    //아무것도 착용하지 않은 경우 1을 빼야한다
     return answer - 1;
 }
 ```
@@ -114,7 +116,7 @@ function solution(clothes) {
 
 ### 유사 문제
 ---
-- 코드스테이츠 / Data Structure & Algorithm_20 집밥이 그리워
+- 코드스테이츠 / Data Structure & Algorithm_20 집밥이 그리워\
 : 조금만 수정하면 충분히 멱집합을 구하는 문제가 될 수 있으므로 그와 유사한 문제를 달아놓는다.
 
 <br>
