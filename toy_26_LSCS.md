@@ -76,6 +76,7 @@ const LSCS = function (arr) {
 
 ### Reference Code
 ---
+- 내 풀이랑 접근 방식은 비슷하나 연속하는 배열이기 때문에 굳이 이중반복문을 사용할 필요가 없다는 걸 간과했다.
 
 ```js
 // naive solution: O(N^2)
