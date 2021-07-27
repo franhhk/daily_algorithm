@@ -1,7 +1,7 @@
-프로그래머스 : 완주하지 못한 선수
+프로그래머스 : 숫자 문자열과 영단어
 ===
 ### 링크
-https://programmers.co.kr/learn/courses/30/lessons/42576
+https://programmers.co.kr/learn/courses/30/lessons/81301
 
 <br>
 
