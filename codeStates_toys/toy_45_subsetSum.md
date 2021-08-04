@@ -31,7 +31,7 @@ number 타입을 리턴해야 합니다.
 
 ### 나의 풀이
 ---
-
+- 풀이 (1)
 <br>
 
 ```js
@@ -54,6 +54,34 @@ const subsetSum = function (set, bound) {
   subset(0, 0)
 
   return answer;
+};
+```
+
+- 풀이 (2)
+```js
+const subsetSum = function (set, bound) {
+  let max = 0;
+
+  let sums = new Set()
+
+  for(let el of set) {
+    for(let sum of sums) {
+      let newSum = sum + el
+      if(newSum <= bound) {
+        sums.add(newSum)
+        if(newSum > max) {
+          max = newSum
+        }
+      }
+    }
+
+    if(el <= bound && el > max) {
+      sums.add(el)
+      max = el
+    }
+  }
+
+  return max;
 };
 ```
 <br>
