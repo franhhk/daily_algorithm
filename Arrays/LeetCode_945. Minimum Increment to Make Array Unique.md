@@ -34,8 +34,9 @@ It can be shown with 5 or less moves that it is impossible for the array to have
 
 ### 나의 풀이
 ---
+- 시간 복잡도: O(N)
+
 <br>
--시간 복잡도: O(N)
 
 ```js
 const minIncrementForUnique = function(nums) {
