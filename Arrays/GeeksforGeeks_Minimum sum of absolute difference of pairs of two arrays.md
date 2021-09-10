@@ -46,7 +46,7 @@ Output : 6
 <br>
 
 ```js
-function test(a, b, n) {
+function test(a, b) {
     a.sort((a,b) => a-b)
     b.sort((a,b) => a-b)
 
