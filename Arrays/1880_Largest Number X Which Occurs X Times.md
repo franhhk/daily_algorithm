@@ -82,5 +82,6 @@ export class Solution {
 ---
 - `487 ms` time cost
 - `33.85 MB` memory cost
+- `easy`
 
 <br>
