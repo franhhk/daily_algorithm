@@ -37,8 +37,6 @@ rotate 2 steps to the right: [3,99,-1,-100]
 
 ### 나의 풀이
 ---
-<br>
-
 ```js
 //풀이(1)
 export class Solution {
@@ -58,7 +56,7 @@ export class Solution {
 }
 ```
 - 위의 풀이로 깔끔하게 통과했지만 재귀적으로도 풀어보고 싶었다.
-```
+```js
 //풀이(2)
 export class Solution {
 
