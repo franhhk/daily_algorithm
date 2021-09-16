@@ -66,7 +66,7 @@ export class Solution {
 ### Reference Code
 ---
 - `223 ms` time cost | `77.07 MB` memory cost | Your submission beats `96.67 %` Submissions
-- 모든 소수 후보에 대해 반복문을 돌리지 않는다는 점에서 시간 소요가 훨씬 줄어든다.
+- 모든 소수 후보에 대해 반복문을 돌리지 않아서 소요되는 시간 소요가 훨씬 줄어든다.
 ```js
 var countPrimes = function(n) {
     let flagArray = [],
