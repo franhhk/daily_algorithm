@@ -31,6 +31,7 @@ rotate 2 steps to the right: [3,99,-1,-100]
 ```
 #### Challenge
 1.Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem. ✅
+
 2.Could you do it in-place with O(1) extra space? ✅
 <br>
 
