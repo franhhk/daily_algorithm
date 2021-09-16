@@ -1,7 +1,7 @@
 1250 : Third Maximum Number
 ===
 ### Company
-`Microsoft`, `Bloomberg`, `Amazon`
+`Microsoft`, `Facebook`, `Amazon`, `Google`
 
 ### Tags
 `Array`, `Enumerate`
