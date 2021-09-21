@@ -30,46 +30,36 @@ Explanation：The 11th digit of the sequence 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 
 
 ### 나의 풀이
 ---
+- As for the first approach, the logic worked but it caused a runtime error
+- `Your code cost too much memory than we expected. Check your space complexity.`
 ```js
 // Solution (1)
 export class Solution {
 
   /**
-   * addDigits
+   * findNthDigit
    *
-   * @param num: a non-negative integer
-   * @return: one digit
+   * @param n: a positive integer
+   * @return: the nth digit of the infinite integer sequence
    */
-  addDigits(num) {
-    num = '' + num
-    
-    if(num.length === 1) return +num;
+  findNthDigit(n) {
+     let num = '';
+     let i = 1;
 
-    let sum = num.split('').reduce((a,c) => a + Number(c), 0)
-    let solution = new Solution();
-    return solution.addDigits(sum)
+     while(num.length < n) {
+         num += i;
+         i++;
+     }
+
+     return +num[n-1];
   }
 
 }
 ```
-- This time I accepted the challenge and wrote the code with time complexity of O(1).
-- Besides 0, there are only 1~9 digits you could actually use. So anything beyond those numbers, it will circulate within those nine numbers. This is where I got the idea of finding the remains after dividing the given number by 9.
-- The code looks much more simple, but the time / memory cost weren't as ideal as I expected.
+- 
 ```js
 // Solution (2)
-export class Solution {
 
-  /**
-   * addDigits
-   *
-   * @param num: a non-negative integer
-   * @return: one digit
-   */
-  addDigits(num) {
-    return num % 9 === 0 ? (num === 0? 0 : 9) : num % 9;
-  }
-
-}
 ```
 <br>
 
@@ -79,11 +69,6 @@ export class Solution {
 
 ### Record
 ---
-Solution (1)
-- `101 ms` time cost
-- `8.83 MB` memory cost
-- Your submission beats `100.00 %` Submissions
-
 Solution (2)
 - `123 ms` time cost
 - `9.10 MB` memory cost
