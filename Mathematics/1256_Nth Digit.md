@@ -65,15 +65,29 @@ export class Solution {
 
 ### Reference Code
 ---
+```js
+const findNthDigit = (num = 1) => {
+   let start = 1;
+   let len = 1;
+   let count = 9;
+   while(num > len * count) {
+      num -= len * count;
+      len++; count *= 10;
+      start *= 10;
+   };
+   start += Math.floor((num-1)/len);
+   let s = String(start);
+   return Number(s[(num-1) % len]);
+};
+```
+- `101 ms` time cost
+- `9.20 MB` memory cost
+- Your submission beats `100.00 %` Submissions
+
 <br>
 
 ### Record
 ---
-Solution (2)
-- `123 ms` time cost
-- `9.10 MB` memory cost
-- Your submission beats `94.29 %` Submissions
-
 Level
 - `easy`
 
