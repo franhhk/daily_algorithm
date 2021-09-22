@@ -56,11 +56,6 @@ export class Solution {
 
 }
 ```
-- 
-```js
-// Solution (2)
-
-```
 <br>
 
 ### Reference Code
