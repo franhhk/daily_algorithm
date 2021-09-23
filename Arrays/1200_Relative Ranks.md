@@ -54,7 +54,40 @@ export class Solution {
 
 ### Reference Code
 ---
+```js
+export class Solution {
 
+  /**
+   * findRelativeRanks
+   *
+   * @param nums: List[int]
+   * @return: return List[str]
+   */
+  findRelativeRanks(nums) {
+    var sorted = nums.slice(),
+        map = {};
+    
+    sorted.sort((a,b) => b-a);
+    
+    sorted.forEach((v,i) => {
+        map[v] = i + 1 + '';
+    })
+    
+    return nums.map((v,i) => {
+        switch(v){
+            case sorted[0]:
+                return "Gold Medal";
+            case sorted[1]:
+                return "Silver Medal";
+            case sorted[2]:
+                return "Bronze Medal";
+            default:
+                return map[v]
+        }
+    })
+  }
+}
+```
 ### Records
 ---
 - `122 ms` time cost
