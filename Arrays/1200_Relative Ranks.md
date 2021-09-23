@@ -88,6 +88,10 @@ export class Solution {
   }
 }
 ```
+- `101 ms` time cost
+- `9.31 MB` memory cost
+- Your submission beats `100.00 %` Submissions
+
 ### Records
 ---
 - `122 ms` time cost
