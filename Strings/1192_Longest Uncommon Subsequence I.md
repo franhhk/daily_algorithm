@@ -44,14 +44,12 @@ export class Solution {
    * @return: return a integer
    */
   findLUSlength(a, b) {
-    let solution = new Solution();
-    
     if(a === b) return -1;
 
     function isSub(str1, str2) {
         let count = 0;
         let j = 0;
-
+        
         for(let i=0; i < str1.length; i++) {
             while(j < str2.length) {
                 if(str1[i] === str2[j]) {
@@ -64,17 +62,11 @@ export class Solution {
 
         return count === str1.length;
     }
+
     if(!isSub(a,b) && !isSub(a,b)) return Math.max(a.length, b.length);
     else if(!isSub(a, b)) return a.length;
     else if(!isSub(b, a)) return b.length;
-    else {
-        let candi1 = solution.findLUSlength(a.slice(1), b),
-            candi2 = solution.findLUSlength(a.slice(0, a.length-1), b),
-            candi3 = solution.findLUSlength(b.slice(1), a),
-            candi4 = solution.findLUSlength(b.slice(0, b.length-1), a)
-
-            return Math.max(candi1, candi2, candi3, candi4)
-    }
+    else return -1;
   }
 
 }
@@ -136,7 +128,7 @@ function findLUSlength(a,b)
 ### Record
 ---
 - `101 ms` time cost
-- `9.07 MB` memory cost
+- `9.13 MB` memory cost
 - Your submission beats `100.00%` Submissions
 
 `easy`
