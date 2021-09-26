@@ -30,6 +30,8 @@ because "aba" is a subsequence of "aba", but not a subsequence of any other stri
 
 ### 나의 풀이
 ---
+- If a is a subsequence of b, any subsequence of a are also a subsequence of b.
+- Thus there is no need to be confused by the word 'longest' and check the subsequences of a string once it's confirmed to be a subsequence of b.
 <br>
 
 ```js
