@@ -83,7 +83,7 @@ export class Solution {
 
 ### Reference Code
 ---
-- Assumably due to the triple for loops, the reference code (from [GeekforGeeks](https://www.geeksforgeeks.org/longest-uncommon-subsequence/)) took too much time to process, thus causing a runtime error.
+- Assumably due to the triple for loop, the reference code (from [GeekforGeeks](https://www.geeksforgeeks.org/longest-uncommon-subsequence/)) took too much time to process, thus causing a runtime error.
 ```js
 function findLUSlength(a,b)
     {
