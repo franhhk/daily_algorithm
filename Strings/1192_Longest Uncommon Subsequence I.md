@@ -30,7 +30,6 @@ because "aba" is a subsequence of "aba", but not a subsequence of any other stri
 
 ### 나의 풀이
 ---
-- Used a recursive solution
 <br>
 
 ```js
