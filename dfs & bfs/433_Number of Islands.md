@@ -83,6 +83,42 @@ export class Solution {
 
 }
 ```
+- Second trial on [LeetCode](https://leetcode.com/problems/number-of-islands/)
+```js
+/**
+ * @param {character[][]} grid
+ * @return {number}
+ */
+var numIslands = function(grid) {
+    let count = 0;
+
+    function isIsland(row, col) {
+        if(
+            row >=0 && row < grid.length &&
+            col >=0 && col < grid[0].length
+            grid[row][col] === '1'
+        ) {
+            grid[row][col] = '0'
+        
+            isIsland(row+1, col)
+            isIsland(row-1, col)
+            isIsland(row, col+1)
+            isIsland(row, col-1)
+        }
+    }
+
+    for(let i=0; i < grid.length; i++) {
+        for(let j=0; j < grid[0].length; j++) {
+            if(grid[i][j] === '1') {
+                isIsland(i, j);
+                count++;
+            }
+        }
+    }
+
+    return count;
+};
+```
 <br>
 
 ### 다른 사람 풀이
@@ -131,6 +167,9 @@ const numIslands = (grid) => {
 
 ### Record
 ---
+Leetcode
+- Runtime: 88 ms, faster than 65.54% of JavaScript online submissions for Number of Islands.
+- Memory Usage: 41.4 MB, less than 67.46% of JavaScript online submissions for Number of Islands.
 - `easy`
 
 <br>
