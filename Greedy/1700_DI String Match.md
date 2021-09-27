@@ -67,6 +67,34 @@ export class Solution {
   }
 }
 ```
+- Second trial on [LeetCode](https://leetcode.com/problems/di-string-match/)
+- Realized that it doesn't matter if I push max or min in the end.
+- Thus wrote a cleaner code without previous lines 62 - 64.
+```js
+/**
+ * @param {string} s
+ * @return {number[]}
+ */
+var diStringMatch = function(s) {
+    let min = 0;
+    let max = s.length;
+    let answer = [];
+    
+    for(let el of s) {
+        if(el === 'I') {
+            answer.push(min);
+            min++;
+        } else {
+            answer.push(max);
+            max--;
+        }
+    }
+    
+    return [...answer, min] //or max, it doesn't matter
+};
+```
+- Runtime: 96 ms, faster than 68.13% of JavaScript online submissions for DI String Match.
+- Memory Usage: 43 MB, less than 32.42% of JavaScript online submissions for DI String
 <br>
 
 ### 다른 사람 풀이
