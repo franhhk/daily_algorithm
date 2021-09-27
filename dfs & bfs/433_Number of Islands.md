@@ -170,6 +170,8 @@ const numIslands = (grid) => {
 Leetcode
 - Runtime: 88 ms, faster than 65.54% of JavaScript online submissions for Number of Islands.
 - Memory Usage: 41.4 MB, less than 67.46% of JavaScript online submissions for Number of Islands.
-- `easy`
+
+#### Level
+`medium`
 
 <br>
